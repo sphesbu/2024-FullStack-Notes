@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Appsetting
+{
+    public partial class Login : System.Web.UI.Page
+    {
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (!IsPostBack)
+    {
+        string teams = "Manchester United, Real Madrid, Barcelona, Liverpool, Bayern Munich, Juventus, Paris Saint-Germain, Chelsea, Manchester City, Arsenal, Borussia Dortmund, AC Milan, Atletico Madrid, Inter Milan, Tottenham Hotspur, Ajax, Napoli, AS Roma, FC Porto, Olympique de Marseille";
+
+        string[] teamArray = teams.Split(',');
+
+       
+
+
+        GridView1.DataSource = teamArray;
+        GridView1.DataBind();
+    }
+}
+
+
+        protected void teams(object sender, EventArgs e)
+        {
+            if (!IsPostBack) {
+
+       
+
+
+            }
+        }
+    }
+}
